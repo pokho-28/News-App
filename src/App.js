@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 export default class App extends Component {
-  c = "prakhar";
+  // c = "prakhar";
   render() {
     return (
       <div>
@@ -14,6 +14,17 @@ export default class App extends Component {
             <Routes>
               <Route
                 path="/"
+                element={
+                  <News
+                    key="general"
+                    pageSize={5}
+                    country="in"
+                    category="general"
+                  />
+                }
+              />
+              <Route
+                path="general/*"
                 element={
                   <News
                     key="general"
